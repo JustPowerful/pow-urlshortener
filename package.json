@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "a test application that makes you test your websote",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "JustPowerful",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "nodemon": "^2.0.7",
+    "shortid": "^2.2.16",
+    "slugify": "^1.4.6",
+    "uniqid": "^5.2.0",
+    "valid-url": "^1.0.9"
+  }
+}
