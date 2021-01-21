@@ -1,5 +1,32 @@
-<form action="/create" method="POST">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="longUrl" placeholder="Long url">
-    <input type="submit" value="Send">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("_base.ejs") %> 
+</head>
+<body>
+  <br>
+  <center>
+    <h1>Home</h1>
+  </center>
+  <br>
+    <div class="container">
+      <form class="row g-3" action="/create" method="POST">
+        <div class="col-auto">
+          <label for="inputPassword2" class="visually-hidden">Password</label>
+          <input type="text" class="form-control" id="inputTitle" name="title" placeholder="Title">
+        </div>
+        <div class="col-auto">
+          <label for="inputPassword2" class="visually-hidden">Password</label>
+          <input type="text" class="form-control" id="inputUrl" name="longUrl" placeholder="URL">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Shorten</button>
+        </div>
+      </form>
+          </form>
+    </div>
+</body>
+</html>

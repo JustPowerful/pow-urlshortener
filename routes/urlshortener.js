@@ -17,7 +17,7 @@ router.post('/create', async (req, res) => {
         const info = await shortUrl.save()
     
         const url = req.protocol + '://' + req.get('host');
-        res.render('viewurl', {id: info.id, url: url})
+        res.render('viewurl', {info: info, url: url})
     }
     else 
     {
@@ -25,7 +25,7 @@ router.post('/create', async (req, res) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/i/:id', async (req, res) => {
     const data = await Url.findById(req.params.id)
     res.redirect(data.longUrl)
 })

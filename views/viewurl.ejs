@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include("_base.ejs") %> 
 </head>
 <body>
     <!-- Short url -->
+    <br><br>
     <center>
-        <p><%= url %>/<%= id %></p>
+        <h1>Successfully shortened!</h1>
+        <br>
+        <h3><%= info.title %> </h3>
+        <p><span style="font-weight: 200;">Short url:</span> <a href="<%= url %>/i/<%= info.id %>"><%= url %>/i/<%= info.id %></a></p>
+        <p><span style="font-weight: 200;">Stats:</span> <a href="<%= url %>/i/<%= info.id %>"><%= url %>/stats/<%= info.id %></a></p>
     </center>
 </body>
 </html>
