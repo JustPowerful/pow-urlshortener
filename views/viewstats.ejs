@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <%- include("_base.ejs") %> 
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+        <h1>Stats</h1> 
+        
+        <p class="stats">
+            <span style="font-weight: 700;">Title : </span> <%= data.title %> <br>
+            <span style="font-weight: 700;">ID : </span> <%= data.id %> <br>
+            
+            <span style="font-weight: 700;">Created at : </span> <%= moment(data.createdAt).format('MMMM Do YYYY, h:mm:ss a') %> <br>
+            <span style="font-weight: 700;">Shortened link : </span> <a href="<%= url %>\i\<%= data.id %>"><%= url %> \i\<%= data.id %></a> <br>
+            
+            <span style="font-weight: 700;">Clicks : </span> <%= data.clicks %>  <!-- Add this feature later -->
+        </p>
+    </div>
+
+    <style>
+        .stats 
+        {
+            font-size: 20px;
+        }
+    </style> 
+</body>
+</html>
