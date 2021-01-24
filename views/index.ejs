@@ -9,24 +9,23 @@
 <body>
   <br>
   <center>
-    <h1>Home</h1>
+    <h1>Shortener</h1>
   </center>
   <br>
-    <div class="container">
-      <form class="row g-3" action="/create" method="POST">
-        <div class="col-auto">
-          <label for="inputPassword2" class="visually-hidden">Password</label>
-          <input type="text" class="form-control" id="inputTitle" name="title" placeholder="Title">
-        </div>
-        <div class="col-auto">
-          <label for="inputPassword2" class="visually-hidden">Password</label>
-          <input type="text" class="form-control" id="inputUrl" name="longUrl" placeholder="URL">
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Shorten</button>
-        </div>
-      </form>
-          </form>
-    </div>
+
+  <div class="container">
+    <form method="POST" action="/create" style="background-color: rgb(241, 241, 241); padding: 15px; border-radius: 10px;">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title" aria-describedby="emailHelp" placeholder="Enter title">
+        <small id="emailHelp" class="form-text text-muted">Try to chose a descriptive title.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Url to shorten</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="longUrl" placeholder="Enter url to shorten">
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Shorten</button>
+    </form>
+  </div>
 </body>
 </html>
