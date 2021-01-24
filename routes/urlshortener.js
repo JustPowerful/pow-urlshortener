@@ -26,6 +26,20 @@ router.post('/create', async (req, res) => {
     }
 })
 
+router.post('/trackredirect', async (req, res) => {
+    const { linkId } = req.body
+    
+    const data = await Url.findById(linkId)
+    if (data) 
+    {
+        res.redirect(`/stats/${linkId}`)
+    } else
+    {
+        // If there's nothing in the database
+        res.send("Invalid tracking id");
+    }
+})
+
 router.get('/i/:id', async (req, res) => {
     const data = await Url.findById(req.params.id)
     
@@ -57,5 +71,7 @@ router.get('/stats/:id', async (req, res) => {
         res.redirect('/')
     }
 })
+
+
 
 module.exports = router

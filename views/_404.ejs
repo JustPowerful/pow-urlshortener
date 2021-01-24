@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 PAGE NOT FOUND</title>
+</head>
+<body>
+    <%- include("_base") %> 
+    
+    <style>
+        .centerofthepage {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            text-align: center;
+            width: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border: solid 2px black;
+        }
+
+        .error {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+        .desc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0 100px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .centerofthepage {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                border: solid 2px black;
+            }
+
+            .desc {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 0 20px;
+            }
+        }
+
+        
+
+        .line {
+            margin: 0 auto;
+            border-bottom: solid 2px black;
+            width: 50%;
+        }
+    </style>
+
+    
+        
+        <div class="centerofthepage">
+            <h1 class="error">404 PAGE NOT FOUND</h1>
+            <div class="line"></div>
+            <p class="desc">We can't find anything that is related to the provided link. <a href="/">Go back to main page</a></p>
+            
+        </div>
+    
+    
+</body>
+</html>

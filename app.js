@@ -21,6 +21,10 @@ app.get('/', (req, res) =>
 
 app.use(require('./routes/urlshortener'))
 
+app.use(function(req, res) {
+    res.status(404).render("_404")
+})
+
 app.listen(process.env.PORT, () => {
     console.log("Server running at", process.env.PORT)
 })
